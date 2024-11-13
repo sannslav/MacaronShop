@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macaron Shop</title>
+  <link rel="icon" href="images/icon.ico">
+  <link rel="icon" type="image/svg+xml" href="images/icon.svg">
+  <link rel="apple-touch-icon" href="images/icon.png">
+  <link rel="stylesheet" href="bootstrap.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  
+  <style>
+    @font-face {
+      font-family: "Montserrat";
+      src: url("fonts/Montserrat-Regular.ttf");
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Montserrat";
+      src: url("fonts/Montserrat-Medium.ttf");
+      font-weight: 500;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Montserrat";
+      src: url("fonts/Montserrat-Bold.ttf");
+      font-weight: 700;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Montserrat";
+      src: url("fonts/Montserrat-SemiBold.ttf");
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    body {
+      font-family: "Montserrat";
+      background-color: #f7f7f7;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container-fluid p-0">
+    <div class="container-fuild">
+      <nav class="navbar d-flex flex-column navbar-expand-lg p-0">
+        <div class="container-nav">
+          <a class="navbar-brand hidden" href="#">
+            <img src="images/logo-phone.svg" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть">
+                <img src="images/burger-close.svg" alt="cross">
+              </button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item d-flex align-items-center gap-2">
+                  <a class="nav-link fs-14 underline-hover text-uppercase p-0" style="line-height: normal;" aria-current="page" href="#">Сладкие дни</a>
+                  <img src="images/sale.svg" alt="sale">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-14 underline-hover text-uppercase p-0" style="line-height: normal;" aria-current="page" href="#">Весь каталог</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-14 underline-hover text-uppercase p-0" style="line-height: normal;" aria-current="page" href="#">Компаниям</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-14 underline-hover text-uppercase p-0" style="line-height: normal;" aria-current="page" href="#">Создать дизайн</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-14 underline-hover text-uppercase p-0" style="line-height: normal;" aria-current="page" href="#">Доставка и оплата</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-14 underline-hover text-uppercase p-0" style="line-height: normal;" aria-current="page" href="#">Контакты</a>
+                </li>
+                <li class="nav-item d-flex align-items-center gap-2">
+                  <img src="images/phone.svg" alt="phone">
+                  <a class="nav-link fs-14 fw-semibold p-0" style="line-height: normal;" aria-current="page" href="#">8 812 309-82-88</a>
+                </li>
+                <li class="nav-item d-flex align-items-center" style="gap: 10px;">
+                  <img src="images/tg.svg" alt="telegram">
+                  <img src="images/vk-nav.svg" alt="vk">
+                  <img src="images/ok.svg" alt="ok">
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="collapse navbar-collapse nav-custom" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item d-flex align-items-center gap-2">
+                <a class="nav-link p-0 fs-14 underline-hover text-uppercase" style="line-height: normal;" aria-current="page" href="#">Сладкие дни</a>
+                <div>
+                  <img src="images/sale.svg" alt="sale" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0 fs-14 underline-hover text-uppercase" style="line-height: normal;" aria-current="page" href="#">Весь каталог</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0 fs-14 underline-hover text-uppercase" style="line-height: normal;" aria-current="page" href="#">Компаниям</a>
+              </li>
+              <li>
+                <a class="navbar-brand" href="#">
+                  <img src="images/logo.svg" alt="logo">
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0 fs-14 underline-hover text-uppercase" style="line-height: normal;" aria-current="page" href="#">Создать дизайн</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0 fs-14 underline-hover text-uppercase" style="line-height: normal;" aria-current="page" href="#">Доставка и оплата</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0 fs-14 underline-hover text-uppercase" style="line-height: normal;" aria-current="page" href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content mx-auto d-flex flex-column align-items-center">
+          <button type="button" class="btn-close" style="border: none; background-color: transparent; margin: 0 0 0 auto;" data-bs-dismiss="modal" aria-label="Закрыть">
+            <img src="images/burger-close.svg" alt="close">
+          </button>
+          <div class="fs-30 fw-semibold mb-4 text-center">Оставить заявку на заказ набора</div>
+          <form class="was-validated d-flex gap-3 flex-column" id="myForm2">
+            <div class="d-flex flex-column mb-3 gap-3">
+              <div class="d-flex gap-30 flex-row">
+                <div class="d-flex flex-column">
+                  <label for="name2" class="form-label fs-14">Ваше имя*</label>
+                  <input type="text" class="form-check-input fs-14 m-0" id="name2" name="name2" pattern=".{2,}" required placeholder="Укажите имя" aria-label="Username" aria-describedby="text"/>
+                </div>
+                <div class="d-flex flex-column">
+                  <label for="tel2" class="form-label fs-14">Ваш телефон*</label>
+                  <input type="tel" class="form-check-input fs-14 m-0" id="tel2" pattern="^\+?\d{10,}$" name="tel2" required placeholder="+7 (___) ___-__-__" aria-label="tel" aria-describedby="tel"/>
+                </div>
+              </div>
+              <div class="d-flex gap-30 flex-row">
+                <div class="d-flex flex-column">
+                  <label for="company2" class="form-label fs-14">Название компании</label>
+                  <input type="text" class="form-check-input fs-14 m-0" id="company2" name="text2" aria-label="companyname" aria-describedby="text"/>
+                </div>
+                <div class="d-flex flex-column">
+                  <label for="email2" class="form-label fs-14">E-mail*</label>
+                  <input type="email" class="form-check-input fs-14 m-0" id="email2" name="email2" required aria-label="tel" aria-describedby="tel"/>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column">
+              <label for="comment" class="form-label fs-14">Добавить комментарий</label>
+              <textarea name="comment" id="comment"></textarea>  
+            </div>
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-custom btn-custom-orange fs-14 fw-bold">
+                Отправить
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container container-main p-0 d-flex align-items-center mt-100">
+      <div>
+        <img src="images/main-img.png" alt="candies" style="width: 100%; height: 100%; max-width: 671px; object-fit: contain;">
+      </div>
+      <div class="d-flex flex-column align-items-center gap-3">
+        <div class="fw-semibold text-uppercase fs-22">Macaronshop</div>
+        <div class="d-flex gap-2 align-items-center">
+          <div style="width: 28.94px; height: 0px; border: 1.50px black solid"></div>
+          <div class="fs-6 fw-semibold">since 2013</div>
+          <div style="width: 28.94px; height: 0px; border: 1.50px black solid"></div>
+        </div>
+        <div class="fs-1 fw-semibold">Настоящая любовь</div>
+        <div class="fs-18 text-center" style="max-width: 497px;">Пирожные макарон и другие десерты из натуральных ингредиентов, приготовленные с любовью</div>
+      </div>
+    </div>
+
+    <div class="container container-grid d-flex flex-column p-0 mt-100" style="gap: 30px;">
+      <div class="row flex-row d-flex" style="gap: 30px;">
+        <div class="col d-flex" style="background-image: url('images/grid1.png');">
+          <div class="d-flex flex-column align-items-center gap-3 mx-auto my-auto">
+            <div class="show-before-phone">
+              <img src="images/grid-hat-1.svg" alt="boxes" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <div class="d-flex gap-2">
+              <div class="fw-semibold fs-5">Готовые наборы</div>
+              <img src="images/arrow.svg" alt="arrow">
+            </div>
+            <div class="w-100 hidden" style="height: 0px; border: 1px rgba(41, 41, 41, 0.16) solid"></div>
+            <div class="fs-6 text-center show-before-phone">Готовые наборы со скидкой. Вы можете подобрать набор на подходящий случай.</div>
+          </div>
+        </div>
+        <div class="col d-flex" style="background-image: url('images/grid2.png');">
+          <div class="d-flex flex-column align-items-center gap-3 mx-auto my-auto">
+            <div class="show-before-phone">
+              <img src="images/grid-hat-2.svg" alt="own boxes" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <div class="d-flex gap-2">
+              <div class="fw-semibold fs-5">Собрать свой набор</div>
+              <img src="images/arrow.svg" alt="arrow">
+            </div>
+            <div class="w-100 hidden" style="height: 0px; border: 1px rgba(41, 41, 41, 0.16) solid"></div>
+            <div class="fs-6 text-center show-before-phone">Выбрать количество макарун, и выбрать вкусы</div>
+          </div>
+        </div>
+      </div>
+      <div class="row flex-row d-flex" style="gap: 30px;">
+        <div class="col d-flex" style="background-image: url('images/grid3.png');">
+          <div class="d-flex flex-column align-items-center gap-3 mx-auto my-auto">
+            <div class="show-before-phone">
+              <img src="images/grid-hat-3.svg" alt="paint" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <div class="d-flex gap-2">
+              <div class="fw-semibold fs-5">Набор с индивидуальной печатью</div>
+              <img src="images/arrow.svg" alt="arrow">
+            </div>
+            <div class="w-100 hidden" style="height: 0px; border: 1px rgba(41, 41, 41, 0.16) solid"></div>
+            <div class="fs-6 text-center show-before-phone">Собрать набор макарон с уникальным дизайном. </div>
+          </div>
+        </div>
+        <div class="col d-flex" style="background-image: url('images/grid4.png');">
+          <div class="d-flex flex-column align-items-center gap-3 mx-auto my-auto">
+            <div class="show-before-phone">
+              <img src="images/grid-hat-4.svg" alt="cake" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <div class="d-flex gap-2">
+              <div class="fw-semibold fs-5">Свадебные предложения</div>
+              <img src="images/arrow.svg" alt="arrow">
+            </div>
+            <div class="w-100 hidden" style="height: 0px; border: 1px rgba(41, 41, 41, 0.16) solid"></div>
+            <div class="fs-6 text-center show-before-phone">Нежные пирожные макаронс с разными вкусами для украшения вашего свадебного торжества</div>
+          </div>
+        </div>
+      </div>
+      <div class="row flex-row d-flex" style="gap: 30px;">
+        <div class="col d-flex" style="background-image: url('images/grid5.png');">
+          <div class="d-flex flex-column align-items-center gap-3 mx-auto my-auto">
+            <div class="show-before-phone">
+              <img src="images/grid-hat-5.svg" alt="gift" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <div class="d-flex gap-2">
+              <div class="fw-semibold fs-5">Корпоративные подарки</div>
+              <img src="images/arrow.svg" alt="arrow">
+            </div>
+            <div class="w-100 hidden" style="height: 0px; border: 1px rgba(41, 41, 41, 0.16) solid"></div>
+            <div class="fs-6 text-center show-before-phone">От 85 руб за шт. С уникальным дизайном. Приятный комплимент для коллег и партнеров</div>
+          </div>
+        </div>
+        <div class="col d-flex" style="background-image: url('images/grid6.png');">
+          <div class="d-flex flex-column align-items-center gap-3 mx-auto my-auto">
+            <div class="show-before-phone">
+              <img src="images/grid-hat-6.svg" alt="tea" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <div class="d-flex gap-2">
+              <div class="fw-semibold fs-5">Оптовые поставки</div>
+              <img src="images/arrow.svg" alt="arrow">
+            </div>
+            <div class="w-100 hidden" style="height: 0px; border: 1px rgba(41, 41, 41, 0.16) solid"></div>
+            <div class="fs-6 text-center show-before-phone">Предложение для кофеен, кафе, отелей и т.д. Посмотрите условия сотрудничества и отзывы.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-flex flex-column mt-100 align-items-center gap-40">
+      <div class="fs-30 fw-semibold">Акции</div>
+      <div class="row flex-row" style="gap: 30px; color: #fff;">
+        <div class="col position-relative d-flex justify-content-center">
+          <img src="images/stock_1.png" alt="stock" style="width: 100%; height: 100%; object-fit: contain;">
+          <div class="position-absolute fs-6 text-center fw-semibold" style="bottom: 1.3vw; line-height: 20px; max-width: 210px;">По СПб в районе КАД –  от 3000₽ По МСК – от 5000₽</div>
+        </div>
+        <div class="col position-relative d-flex justify-content-center">
+          <img src="images/stock_2.png" alt="stock" style="width: 100%; height: 100%; object-fit: contain;">
+          <div class="position-absolute fs-6 text-center fw-semibold" style="bottom: 1.3vw; line-height: 20px; max-width: 210px;">Шоколадное пирожное картошка на основе бисквита!</div>
+        </div>
+        <div class="col position-relative d-flex justify-content-center">
+          <img src="images/stock_3.png" alt="stock" style="width: 100%; height: 100%; object-fit: contain;">
+          <div class="position-absolute fs-6 text-center fw-semibold" style="bottom: 1.3vw; line-height: 20px; max-width: 210px;">Аппетитные конфеты на основе миндального печенья и крема</div>
+        </div>
+        <div class="col position-relative d-flex justify-content-center">
+          <img src="images/stock_4.png" alt="stock" style="width: 100%; height: 100%; object-fit: contain;">
+          <div class="position-absolute fs-6 text-center fw-semibold" style="bottom: 1.3vw; line-height: 20px; max-width: 210px;">Карамель на палочке из натуральных ингредиентов</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container container-party d-flex flex-column mt-100 align-items-center p-0">
+      <div class="fs-30 fw-semibold">Ближайшие праздники</div>
+      <div class="position-relative d-flex justify-content-center w-100">
+        <div class="d-flex flex-row justify-content-between align-items-end w-100">
+          <div class="d-flex flex-column align-items-center justify-content-between gap-2">
+            <div>
+              <img src="images/party1.svg" alt="party" data-bs-toggle="tooltip" data-bs-placement="top" title="Порадуйте именинника вкусным подарком!" style="cursor: pointer; width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <div class="fs-14 fw-semibold text-center" style="max-width: 170px;">Скоро День рождения близкого человека</div>
+          </div>
+          <div class="d-flex flex-column align-items-center justify-content-between gap-2">
+            <div>
+              <img src="images/party2.svg" alt="party" data-bs-toggle="tooltip" data-bs-placement="top" title="Подарите приятные эмоции в новом году!" style="cursor: pointer; width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <div class="fs-14 fw-semibold text-center" style="max-width: 170px;">1 января Новый Год 2025</div>
+          </div>
+          <div class="d-flex flex-column align-items-center justify-content-between gap-2">
+            <div>
+              <img src="images/party3.svg" alt="party" data-bs-toggle="tooltip" data-bs-placement="top" title="Порадуйте свою вторую половинку!" style="cursor: pointer; width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <div class="fs-14 fw-semibold text-center" style="max-width: 170px;">14 февраля День Святого Валентина</div>
+          </div>
+          <div class="d-flex show-before-phone flex-column align-items-center justify-content-between gap-2">
+            <div>
+              <img src="images/party4.svg" alt="party" data-bs-toggle="tooltip" data-bs-placement="top" title="Поздавьте любимого мужчину!" style="cursor: pointer; width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <div class="fs-14 fw-semibold text-center" style="max-width: 170px;">23 февраля День Защитника Отечества</div>
+          </div>
+          <div class="d-flex show-before-phone flex-column align-items-center justify-content-between gap-2">
+            <div>
+              <img src="images/party5.svg" alt="party" data-bs-toggle="tooltip" data-bs-placement="top" title="Радуйте прекрасных дам вместе с нашими наборами!" style="cursor: pointer; width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <div class="fs-14 fw-semibold text-center" style="max-width: 195px;">8 марта Международный Женский День</div>
+          </div>
+          <div class="d-flex show-before-phone flex-column align-items-center justify-content-between gap-2">
+            <div>
+              <img src="images/party6.svg" alt="party" data-bs-toggle="tooltip" data-bs-placement="top" title="Отьметьте этот праздник с нашим набором!" style="cursor: pointer; width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <div class="fs-14 fw-semibold text-center" style="max-width: 145px;">9 марта День Сурка</div>
+          </div>
+        </div>
+        <div class="position-absolute" style="width: 85%; height: 0px; border: 2px #D2D2D2 dotted; top: 55%; z-index: -1;"></div>
+      </div>
+    </div>
+
+    <div class="container container-combo d-flex flex-column align-items-center mt-100 p-0 gap-40">
+      <div class="fs-30 fw-semibold">Популярные наборы</div>
+      <div class="container p-0">
+        <nav>
+          <div class="nav nav-pills nav-tabs d-flex gap-2 mb-4" id="nav-tab" role="tablist">
+            <button class="btn-tab fs-18 fw-medium active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">Все</button>
+            <button class="btn-tab fs-18 fw-medium" id="sale-tab" data-bs-toggle="tab" data-bs-target="#sale" type="button" role="tab" aria-controls="sale" aria-selected="false">Скидки</button>
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane d-flex flex-column fade show active" id="all" role="tabpanel" aria-labelledby="all-tab" style="gap: 35px;">
+            <div class="row flex-row" style="gap: 30px;">
+              <div class="col d-flex flex-column" style="background-color: #fff; border-radius: 5px; border: 1px solid #EDEDF0;">
+                <img src="images/combo1.png" alt="combo" style="width: 100%; object-fit: contain;">
+                <div class="d-flex flex-column mx-auto my-3" style="max-width: 327px;">
+                  <div class="fs-18 fw-semibold">Сердце</div>
+                  <div class="fs-14" style="margin: 14px 0 27px; max-width: 317px;">24 штуки в коробке в виде сердца. Ассорти из 6 вкусов</div>
+                  <div class="d-flex justify-content-between">
+                    <div class="fs-18 fw-semibold" style="color: #E7426A;">2800 руб</div>
+                    <div class="d-flex gap-2 align-items-center">
+                      <div>
+                        <img src="images/shop.svg" alt="shop">
+                      </div>
+                      <div class="fs-14 fw-semibold">В корзину</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col d-flex flex-column" style="background-color: #fff; border-radius: 5px; border: 1px solid #EDEDF0;">
+                <img src="images/combo2.png" alt="combo" style="width: 100%; height: 100%; object-fit: contain;">
+                <div class="d-flex flex-column mx-auto my-3" style="max-width: 327px;">
+                  <div class="fs-18 fw-semibold">Красота спасёт мир </div>
+                  <div class="fs-14" style="margin: 14px 0 27px;">Набор 16 шт. Вкусы: клубника - базилик, кокос, голубой сыр, пармезан</div>
+                  <div class="d-flex justify-content-between">
+                    <div class="fs-18 fw-semibold" style="color: #E7426A;">750 руб</div>
+                    <div class="d-flex gap-2 align-items-center">
+                      <div>
+                        <img src="images/shop.svg" alt="shop">
+                      </div>
+                      <div class="fs-14 fw-semibold">В корзину</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col d-flex flex-column" style="background-color: #fff; border-radius: 5px; border: 1px solid #EDEDF0;">
+                <img src="images/combo3.png" alt="combo" style="width: 100%; object-fit: contain;">
+                <div class="d-flex flex-column mx-auto my-3" style="max-width: 327px;">
+                  <div class="fs-18 fw-semibold">Круглый набор</div>
+                  <div class="fs-14" style="margin: 14px 0 27px;">40 макаронс в круглой коробке с персональной надписью</div>
+                  <div class="d-flex justify-content-between">
+                    <div class="fs-18 fw-semibold" style="color: #E7426A;">3900 руб</div>
+                    <div class="d-flex gap-2 align-items-center">
+                      <div>
+                        <img src="images/shop.svg" alt="shop">
+                      </div>
+                      <div class="fs-14 fw-semibold">В корзину</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row flex-row" style="gap: 30px;">
+              <div class="col d-flex flex-column" style="background-color: #fff; border-radius: 5px; border: 1px solid #EDEDF0;">
+                <img src="images/combo4.png" alt="combo" style="width: 100%; height: 100%; object-fit: contain;">
+                <div class="d-flex flex-column mx-auto my-3" style="max-width: 327px;">
+                  <div class="fs-18 fw-semibold">Набор на 9</div>
+                  <div class="fs-14" style="margin: 14px 0 27px;">Набор из 9 штук в квадратной коробке. Вкусы: шоколад, фисташка, вишня</div>
+                  <div class="d-flex justify-content-between">
+                    <div class="fs-18 fw-semibold" style="color: #E7426A;">950 руб</div>
+                    <div class="d-flex gap-2 align-items-center">
+                      <div>
+                        <img src="images/shop.svg" alt="shop">
+                      </div>
+                      <div class="fs-14 fw-semibold">В корзину</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col d-flex flex-column" style="background-color: #fff; border-radius: 5px; border: 1px solid #EDEDF0;">
+                <img src="images/combo5.png" alt="combo" style="width: 100%; height: 100%; object-fit: contain;">
+                <div class="d-flex flex-column mx-auto my-3" style="max-width: 327px;">
+                  <div class="fs-18 fw-semibold">Набор на 16</div>
+                  <div class="fs-14" style="margin: 14px 0 27px;">Набор 16 шт. Вкусы: соленая карамель, голубой сыр, пармезан, шоколад</div>
+                  <div class="d-flex justify-content-between">
+                    <div class="fs-18 fw-semibold" style="color: #E7426A;">1500 руб</div>
+                    <div class="d-flex gap-2 align-items-center">
+                      <div>
+                        <img src="images/shop.svg" alt="shop">
+                      </div>
+                      <div class="fs-14 fw-semibold">В корзину</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col d-flex flex-column" style="background-color: #fff; border-radius: 5px; border: 1px solid #EDEDF0;">
+                <img src="images/combo1.png" alt="combo" style="width: 100%; object-fit: contain;">
+                <div class="d-flex flex-column mx-auto my-3" style="max-width: 327px;">
+                  <div class="fs-18 fw-semibold">Сердце</div>
+                  <div class="fs-14" style="margin: 14px 0 27px; max-width: 317px;">24 штуки в коробке в виде сердца. Ассорти из 6 вкусов</div>
+                  <div class="d-flex justify-content-between">
+                    <div class="fs-18 fw-semibold" style="color: #E7426A;">2800 руб</div>
+                    <div class="d-flex gap-2 align-items-center">
+                      <div>
+                        <img src="images/shop.svg" alt="shop">
+                      </div>
+                      <div class="fs-14 fw-semibold">В корзину</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane d-flex flex-column fade" id="sale" role="tabpanel" aria-labelledby="sale-tab" style="gap: 35px;">
+            <div class="row flex-row" style="gap: 30px;">
+              <div class="col d-flex flex-column" style="background-color: #fff; border-radius: 5px; border: 1px solid #EDEDF0;">
+                <img src="images/combo6.png" alt="combo" style="width: 100%; object-fit: contain;">
+                <div class="d-flex flex-column mx-auto my-3" style="max-width: 327px;">
+                  <div class="fs-18 fw-semibold">Набор-комбо “С Днем рождения”</div>
+                  <div class="fs-14" style="margin: 14px 0 27px;">3 макаронс + 4 эклера в коробке. Вкусы: ассорти</div>
+                  <div class="d-flex justify-content-between">
+                    <div class="fs-18 fw-semibold" style="color: #E7426A;">1190 руб</div>
+                    <div class="d-flex gap-2 align-items-center">
+                      <div>
+                        <img src="images/shop.svg" alt="shop">
+                      </div>
+                      <div class="fs-14 fw-semibold">В корзину</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col d-flex flex-column" style="background-color: #fff; border-radius: 5px; border: 1px solid #EDEDF0;">
+                <img src="images/combo7.png" alt="combo" style="width: 100%; object-fit: contain;">
+                <div class="d-flex flex-column mx-auto my-3" style="max-width: 327px;">
+                  <div class="fs-18 fw-semibold">Пасхальный набор макаронс</div>
+                  <div class="fs-14" style="margin: 14px 0 27px;">20 штук в коробке. Вкусы: ассорти.</div>
+                  <div class="d-flex justify-content-between">
+                    <div class="fs-18 fw-semibold" style="color: #E7426A;">1190 руб</div>
+                    <div class="d-flex gap-2 align-items-center">
+                      <div>
+                        <img src="images/shop.svg" alt="shop">
+                      </div>
+                      <div class="fs-14 fw-semibold">В корзину</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col d-flex flex-column" style="background-color: #fff; border-radius: 5px; border: 1px solid #EDEDF0;">
+                <img src="images/combo8.png" alt="combo" style="width: 100%; object-fit: contain;">
+                <div class="d-flex flex-column mx-auto my-3" style="max-width: 327px;">
+                  <div class="fs-18 fw-semibold">Подарочный набор ко Дню свадьбы</div>
+                  <div class="fs-14" style="margin: 14px 0 27px;">12 макаронс в коробке. Вкусы: ассорти</div>
+                  <div class="d-flex justify-content-between">
+                    <div class="fs-18 fw-semibold" style="color: #E7426A;">1190 руб</div>
+                    <div class="d-flex gap-2 align-items-center">
+                      <div>
+                        <img src="images/shop.svg" alt="shop">
+                      </div>
+                      <div class="fs-14 fw-semibold">В корзину</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row flex-row" style="gap: 30px;">
+              <div class="col d-flex flex-column" style="background-color: #fff; border-radius: 5px; border: 1px solid #EDEDF0;">
+                <img src="images/combo9.png" alt="combo" style="width: 100%; height: 100%; object-fit: contain;">
+                <div class="d-flex flex-column mx-auto my-3" style="max-width: 327px;">
+                  <div class="fs-18 fw-semibold">Пасхальный набор “Светлой Пасхи”</div>
+                  <div class="fs-14" style="margin: 14px 0 27px;">Набор из 9 штук в квадратной коробке. Вкусы: шоколад, фисташка, вишня</div>
+                  <div class="d-flex justify-content-between">
+                    <div class="fs-18 fw-semibold" style="color: #E7426A;">1190 руб</div>
+                    <div class="d-flex gap-2 align-items-center">
+                      <div>
+                        <img src="images/shop.svg" alt="shop">
+                      </div>
+                      <div class="fs-14 fw-semibold">В корзину</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col"></div>
+              <div class="col"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-custom fs-14 fw-semibold" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Заказать набор
+      </button>
+    </div>
+
+    <div class="container p-0 d-flex flex-column align-items-center mt-100 gap-40">
+      <div class="fs-30 fw-semibold">Новости</div>
+      <div class="p-0 container">
+        <div class="carousel-container position-relative">
+          <div class="owl-carousel owl-theme custom-carousel white-color">
+            <div class="item position-relative" style="max-width: max-content;">
+              <img src="images/carousel2.png" alt="carousel1" style="width: 100%; height: 100%; object-fit: contain; max-width: 492px;">
+              <div class="d-flex flex-column w-100 pt-3" style="background-color: #fff; height: 190px;">
+                <div class="item-bottom d-flex flex-column mx-auto gap-2" style="max-width: 330px;">
+                  <div class="fs-14" style="color: #969696;">17.02.2025</div>
+                  <div class="fw-semibold fs-18">Конкурс на 23 февраля!</div>
+                  <div class="fs-14" style="line-height: 18px;">День Защитника Отечества уже совсем скоро! Порадуйте своего сладкоежку с помощью аппетитных наборов от МакаронШоп</div>
+                </div>
+              </div>
+            </div>
+            <div class="item position-relative" style="max-width: max-content;">
+              <img src="images/carousel3.png" alt="carousel2" style="width: 100%; height: 100%; object-fit: contain; max-width: 492px;">
+              <div class="d-flex flex-column w-100 pt-3" style="background-color: #fff; height: 190px;">
+                <div class="item-bottom d-flex flex-column mx-auto gap-2" style="max-width: 330px;">
+                  <div class="fs-14" style="color: #969696;">11.02.2025</div>
+                  <div class="fw-semibold fs-18" style="line-height: 20px;">Экспресс-конкурс ко дню Святого Валентина</div>
+                  <div class="fs-14" style="line-height: 18px;">Подарок уже через 2 дняДень всех влюблённых не за горами. Расскажи о своих чувствах с помощью сладкой валентинки от МакаронШоп</div>
+                </div>
+              </div>
+            </div>
+            <div class="item position-relative" style="max-width: max-content;">
+              <img src="images/carousel1.png" alt="carousel3" style="width: 100%; height: 100%; object-fit: contain; max-width: 492px;">
+              <div class="d-flex flex-column w-100 pt-3" style="background-color: #fff; height: 190px;">
+                <div class="item-bottom d-flex flex-column mx-auto gap-2" style="max-width: 330px;">
+                  <div class="fs-14" style="color: #969696;">25.02.2025</div>
+                  <div class="fw-semibold fs-18" style="line-height: 20px;">Скоро главный праздник весны!</div>
+                  <div class="fs-14" style="line-height: 18px;">Девушки любят, когда вкусно, красиво и натурально. Смотрите больше наборов с десертами ручной работы</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-0 d-flex flex-column align-items-center mt-100 gap-40">
+      <div class="fs-30 fw-semibold">Мы обо всём позаботились</div>
+      <div class="row flex-row" style="gap: 30px;">
+        <div class="col">
+          <div>
+            <img src="images/zabota-1.png" alt="ingredients" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <div class="fs-18 fw-semibold" style="margin: 29px 0 11px;">Лучшие ингредиенты</div>
+          <div class="fs-14">Что-то про суперкачество, лучших поваров, свежесть и т.д.</div>
+        </div>
+        <div class="col">
+          <div>
+            <img src="images/zabota2.png" alt="packaging" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <div class="fs-18 fw-semibold" style="margin: 29px 0 11px;">Упаковка</div>
+          <div class="fs-14">Что-то про суперкоробочки и бантики и бла бла бла</div>
+        </div>
+        <div class="col">
+          <div>
+            <img src="images/zabota3.png" alt="order" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <div class="fs-18 fw-semibold" style="margin: 29px 0 11px;">Получение в день заказа</div>
+          <div class="fs-14">В день заказа доставка курьером или самовывоз</div>
+        </div>
+        <div class="col">
+          <div>
+            <img src="images/zabota4.png" alt="delivery" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <div class="fs-18 fw-semibold" style="margin: 29px 0 11px;">Анонимная доставка</div>
+          <div class="fs-14">Можем преподнести Ваш заказ как анонимный подарок</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-flex flex-column align-items-center gap-40 container-form p-0 mt-100">
+      <div class="fs-30 fw-semibold">Скачать весь каталог подарков</div>
+      <form class="was-validated d-flex gap-3 flex-column" id="myForm1">
+        <div class="d-flex flex-column mb-3 gap-3">
+          <div class="d-flex gap-30 flex-row">
+            <div class="d-flex flex-column">
+              <label for="name" class="form-label fs-14">Ваше имя*</label>
+              <input type="text" class="form-check-input fs-14 m-0" id="name" name="name" pattern=".{2,}" required placeholder="Укажите имя" aria-label="Username" aria-describedby="text"/>
+            </div>
+            <div class="d-flex flex-column">
+              <label for="tel" class="form-label fs-14">Ваш телефон*</label>
+              <input type="tel" class="form-check-input fs-14 m-0" id="tel" pattern="^\+?\d{10,}$" name="tel" required placeholder="+7 (___) ___-__-__" aria-label="tel" aria-describedby="tel"/>
+            </div>
+          </div>
+          <div class="d-flex gap-30 flex-row">
+            <div class="d-flex flex-column">
+              <label for="company" class="form-label fs-14">Название компании</label>
+              <input type="text" class="form-check-input fs-14 m-0" id="company" name="text" aria-label="companyname" aria-describedby="text"/>
+            </div>
+            <div class="d-flex flex-column">
+              <label for="email" class="form-label fs-14">E-mail*</label>
+              <input type="email" class="form-check-input fs-14 m-0" id="email" name="email" required aria-label="tel" aria-describedby="tel"/>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-custom btn-custom-orange fs-14 fw-bold">
+            Отправить
+          </button>
+        </div>
+        <div class="text-form text-center mx-auto" style="line-height: 14px; color: #4F4F4F; font-size: 11px; max-width: 582px;">Нажимая на кнопку "Оформить заказ" Я принимаю и соглашаюсь с <a href="#" style="color: #4E9DD3;">Договором оферты</a> и разрешаю обработку моих персональных данных в соответствии с <a href="#" style="color: #4E9DD3;">Политикой конфиденциальности</a></div>
+      </form>
+    </div>
+    
+    <footer class="container-fluid p-0 mt-100" style="background-color: #EBEDEE;">
+      <div class="container container-footer d-flex flex-row justify-content-between">
+        <div class="d-flex flex-column gap-4">
+          <div class="d-flex flex-row" style="gap: 10px;">
+            <div class="d-flex flex-column gap-3 align-items-center">
+              <div>
+                <img src="images/love.svg" alt="love" style="width: 100%; height: 100%; object-fit: contain;">
+              </div>
+              <div class="fs-12 text-center" style="max-width: 112px;">Готовим вручную и с любовью</div>
+            </div>
+            <div class="d-flex flex-column gap-3 align-items-center">
+              <div>
+                <img src="images/delivery.svg" alt="delivery" style="width: 100%; height: 100%; object-fit: contain;">
+              </div>
+              <div class="fs-12 text-center" style="max-width: 95px;">Доставим в день заказа</div>
+            </div>
+            <div class="d-flex flex-column gap-3 align-items-center">
+              <div class="container-image">
+                <img src="images/ingredients.svg" alt="ingredients" style="width: 100%; height: 100%; object-fit: contain;">
+              </div>
+              <div class="fs-12 text-center" style="max-width: 114px;">100% натуральные ингредиенты и миндальная мука </div>
+            </div>
+          </div>
+          <div class="fs-12 d-flex flex-column show-before-phone" style="line-height: 12px;">
+            <div>© 2021 Макароншоп</div>
+            <div>ООО "Квантум", Санкт-Петербург,  улица Маршала</div>
+            <div>Тухачевского, дом 22</div>
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-3 show-before-phone">
+          <div class="fs-6 fw-semibold text-uppercase">Информация</div>
+          <div class="d-flex flex-column" style="gap: 12px;">
+            <a href="#" class="nav-link fs-14">О компании</a>
+            <a href="#" class="nav-link fs-14">Гарантии вкуса и свежести</a>
+            <a href="#" class="nav-link fs-14">Доставка и оплата</a>
+            <a href="#" class="nav-link fs-14">Контакты</a>
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-3 show-before-phone">
+          <div class="fs-6 fw-semibold text-uppercase">Каталог</div>
+          <div class="d-flex flex-column" style="gap: 12px;">
+            <a href="#" class="nav-link fs-14">Каталог десертов</a>
+            <a href="#" class="nav-link fs-14">Готовые наборы</a>
+            <a href="#" class="nav-link fs-14">Собрать свой набор</a>
+            <a href="#" class="nav-link fs-14">Акции</a>
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-3 show-before-phone">
+          <div class="fs-6 fw-semibold text-uppercase">Для бизнеса</div>
+          <div class="d-flex flex-column" style="gap: 12px;">
+            <a href="#" class="nav-link fs-14">Корпоративные подарки</a>
+            <a href="#" class="nav-link fs-14">Для юридических лиц</a>
+            <a href="#" class="nav-link fs-14">Оптовикам</a>
+          </div>
+        </div>
+        <div class="d-flex flex-column justify-content-between">
+          <div class="hidden d-flex justify-content-between mb-4 mt-4">
+            <div class="fs-10 d-flex flex-column hidden" style="width: 172px; color: #292929;">© 2021 Макароншоп ООО "Квантум", Санкт-Петербург,  улица Маршала Тухачевского, 22</div>
+            <div class="d-flex flex-column" style="text-align: right;">
+              <div class="fs-12 fw-semibold mt-2">+7 (812) 309 82 88</div>
+              <div class="fs-10">с 9:00 до 21:00</div>
+            </div>
+          </div>
+          <div class="d-flex flex-column show-before-phone" style="text-align: right;">
+            <div class="fs-18 fw-semibold mt-2">+7 (812) 309 82 88</div>
+            <div class="fs-14">с 9:00 до 21:00</div>
+          </div>
+          <div class="d-flex gap-4">
+            <img src="images/inst.svg" alt="instagram">
+            <img src="images/fb.svg" alt="facebook">
+            <img src="images/vk.svg" alt="vk">
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var $carousel = $('.owl-carousel');
+      $carousel.owlCarousel({
+        loop: true,
+        dots: true,
+        nav: false,
+        center: true,
+        autoWidth: false,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          768: {
+            items: 2,
+          },
+          1024: {
+            items: 3,
+          },
+          1440: {
+            items: 3,
+          }
+        }
+      });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+      })
+    });
+
+    var triggerTabList = [].slice.call(document.querySelectorAll('#nav-tab button'))
+    triggerTabList.forEach(function (triggerEl) {
+      var tabTrigger = new bootstrap.Tab(triggerEl)
+
+      triggerEl.addEventListener('click', function (event) {
+        event.preventDefault()
+        tabTrigger.show()
+      })
+    });
+    
+  </script>
+</body>
+</html>
